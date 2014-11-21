@@ -51,7 +51,7 @@ public class RegisterOwbElResolverInJetty implements ServletRequestListener
                 if (elResolver == null)
                 {
                     ServletContext context = sre.getServletContext();
-                    JspApplicationContext jspContext = b.getJspApplicationContext(context);
+                    JspApplicationContext jspContext = JspFactory.getDefaultFactory().getJspApplicationContext(context);
 
                     ELAdaptor elAdaptor = WebBeansContext.getInstance().getService(ELAdaptor.class);
 
